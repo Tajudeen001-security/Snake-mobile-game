@@ -1,0 +1,62 @@
+/* Snake Game Styling */
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+
+canvas {
+    border: 2px solid #fff;
+    background: #222;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button {
+    background: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #ccc;
+}
+
+@media (max-width: 600px) {
+    canvas {
+        width: 90vw;
+        height: auto;
+    }
+    .button {
+        padding: 15px;
+        font-size: 1.2em;
+    }
+}
+
+/* Animations */
+@keyframes grow {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.button:active {
+    animation: grow 0.2s;
+}
